@@ -8,10 +8,11 @@
 <title>Success Page</title>
 </head>
 <body>
-
+<h2>${headtitle}</h2>
+<h2>${descone}</h2>
 <h2>You Successfully Signed In</h2>
-<h2>Email id : ${email}</h2>
-<h2>User Name : ${username}</h2>
-<h2>Password : ${password}</h2>
+<h2>Email id : ${user.email}</h2>
+<h2>User Name : ${user.userName}</h2>
+<h2>Password : ${user.password}</h2>
 </body>
 </html>
