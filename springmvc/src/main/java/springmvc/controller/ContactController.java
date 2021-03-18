@@ -1,14 +1,19 @@
 package springmvc.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import springmvc.model.User;
+import springmvc.service.UserDaoService;
 
 @Controller
 public class ContactController {
+	
+	@Autowired
+	private UserDaoService service; 
 
 	@ModelAttribute
 	public void commonData(Model m) {
@@ -28,6 +33,7 @@ public class ContactController {
 	public String handleForm(@ModelAttribute User user, Model m) {
 
 		System.out.println(user);
+		this.service.createUser(user);
 
 		//m.addAttribute("user", user);
 
