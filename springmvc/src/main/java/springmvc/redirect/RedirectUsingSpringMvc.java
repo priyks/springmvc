@@ -19,17 +19,19 @@ public class RedirectUsingSpringMvc {
 
 		return "contact";
 	}
+	
+
 
 }
 /**
  * first way :
- * 
+ * redirect prefix:
  * public String handler(){
  * 
  * return "redirect:/two"; }
  * 
  * second way :
- * 
+ * RedirectView
  * public RedirectView handler(){
  * 
  * RedirectView rv=new RedirectView();

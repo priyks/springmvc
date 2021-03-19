@@ -33,6 +33,12 @@ public class ContactController {
 	public String handleForm(@ModelAttribute User user, Model m) {
 
 		System.out.println(user);
+		
+		if(user.getUserName().isEmpty()) {
+			System.out.println("again on same page ");
+			
+			return "redirect:/contact";
+		}
 		this.service.createUser(user);
 
 		//m.addAttribute("user", user);
